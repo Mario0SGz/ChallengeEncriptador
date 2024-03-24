@@ -29,9 +29,21 @@ function mostrarBotones() {
     campoResultado === "" ? "none" : "block";
 }
 
-//btnEncriptar
+function validarTexto(texto) {
+  // Expresión regular para validar que no haya caracteres especiales ni letras mayúsculas
+  var regex = /^[a-z\s]*$/;
+  return regex.test(texto);
+}
+
 document.getElementById("btnEncriptar").addEventListener("click", function () {
-  var textoOriginal = document.getElementById("textoOriginal").value;
+  var textoOriginal = document.getElementById("textoOriginal").value.trim();
+  
+  // Validar el texto antes de encriptar
+  if (!validarTexto(textoOriginal)) {
+    alert("Por favor, solo letras minúsculas y sin acentos");
+    return;
+  }
+  
   var textoEncriptado = encriptarTexto(textoOriginal);
   var campoResultado = document.getElementById("campoResultado");
   campoResultado.value = textoEncriptado;
@@ -47,25 +59,24 @@ document.getElementById("btnEncriptar").addEventListener("click", function () {
   mostrarBotones();
 });
 
-//btnDesencriptar
 document.getElementById("btnDesencriptar").addEventListener("click", function () {
-   var textoEncriptado = document.getElementById("campoResultado").value;
-    if (textoEncriptado.trim() === "") {
-      textoEncriptado = document.getElementById("textoOriginal").value;
-    }
-    var textoDesencriptado = desencriptarTexto(textoEncriptado);
-    document.getElementById("campoResultado").value = textoDesencriptado;
+  var textoEncriptado = document.getElementById("campoResultado").value.trim();
+  if (textoEncriptado === "") {
+    alert("No hay texto encriptado para desencriptar.");
+    return;
+  }
+  var textoDesencriptado = desencriptarTexto(textoEncriptado);
+  document.getElementById("campoResultado").value = textoDesencriptado;
 
-    // Ocultar imagen y texto
-    document.querySelector(".img-encriptar").style.display = "none";
-    document.querySelector(".textoFinal").style.display = "none";
+  // Ocultar imagen y texto
+  document.querySelector(".img-encriptar").style.display = "none";
+  document.querySelector(".textoFinal").style.display = "none";
 
-    // Mostrar textarea y botón de copiar
-    document.getElementById("campoResultado").style.display = "block";
-    mostrarBotones();
-  });
+  // Mostrar textarea y botón de copiar
+  document.getElementById("campoResultado").style.display = "block";
+  mostrarBotones();
+});
 
-//btnCopiar
 document.getElementById("btnCopiar").addEventListener("click", function () {
   var campoResultado = document.getElementById("campoResultado");
   campoResultado.select();

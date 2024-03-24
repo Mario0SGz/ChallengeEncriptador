@@ -104,7 +104,7 @@ form {
 textarea {
   background-color: transparent;
   resize: none;
-  outline: auto;
+  outline: none;
   border: none;
   font-size: 2em;
 }
@@ -277,7 +277,7 @@ textarea {
 
 .resultadoEncriptado {
   position: absolute;
-  top: 25%;
+  top: 23%;
   right: 60px;
   width: 500px; /* Ancho del rectángulo */
   height: 450px; /* Altura ajustada automáticamente */
@@ -383,11 +383,25 @@ textarea {
     background-color: #fff;
     display: flex; /* Para usar flexbox */
     flex-direction: column; /* Alinear elementos verticalmente */
+    justify-content: center;
     align-items: center; /* Centra los elementos horizontalmente dentro del rectángulo */
+
   }
   .img-encriptar {
     display: none;
   }
+  #campoResultado {
+    position: relative;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    width: 90%; /* Ajusta el ancho al 90% del contenedor */
+    height: 30%; /* Ajusta la altura al 50% del contenedor */
+    display: block;
+    padding: 5px; /* Añade un relleno al textarea */
+    box-sizing: border-box; /* Incluye el relleno en el ancho y alto del textarea */
+    margin: 0 auto; /* Centra horizontalmente */
+  }
+  
 }
 
 /*Responsive Celular CampoResultado*/
