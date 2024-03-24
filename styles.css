@@ -274,6 +274,11 @@ textarea {
 
   
 }
+.textAFinal {
+  margin: 0; /* Establece todos los márgenes a 0 */
+  padding: 0; /* Establece todos los rellenos a 0 */
+}
+
 
 .resultadoEncriptado {
   position: absolute;
