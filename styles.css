@@ -1,0 +1,176 @@
+/* Variables Globales*/
+:root {
+  --fuenteHeading: "Teko", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
+
+  --primario: #0a0908;
+  --secundario: #344e5b;
+  --blanco: #fff;
+  --claro: #f2f4f3;
+  --negro: #000;
+}
+
+body {
+  background: var(--claro);
+  font-family: var(--fuenteParrafos);
+  overflow-x: hidden;
+}
+
+/* Estilos para la imagen */
+.lg-img {
+  position: relative; /* Para posicionar elementos hijos relativos a este contenedor */
+  left: 40px;
+  top: 20px;
+}
+
+.lg-img img {
+  width: 120px; /* Cambia el tamaño según lo necesites */
+  margin: 10px;
+}
+
+/* Estilos para el texto */
+.principal {
+  position: absolute; /* Para posicionar el texto de manera absoluta */
+  top: 50px; /* Ajustamos la posición desde la parte superior */
+  left: 180px; /* Ajustamos la posición desde la izquierda */
+}
+
+.titulo-principal {
+  margin: 0; /* Quitamos el margen predeterminado */
+  font-family: var(--fuenteHeading);
+  font-size: 85px;
+  font-weight: 500;
+}
+form {
+  position: relative;
+  top: 100px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+}
+
+#textoOriginal {
+    border: none;
+    background-color: transparent;
+    width: 50%;
+    margin-left: 40px;
+    margin-bottom: 100px; /* Ajusta este valor según sea necesario */
+  }
+  
+#textoOriginal::placeholder {
+  color: var(--secundario);
+  font-size: 19px;
+  font-weight: 400;
+}
+
+#btnEncriptar {
+    position: absolute;
+    bottom: 0;
+    left: 75px;
+    border-radius: 10px;
+    width: 300px; 
+    height: 50px; 
+    font-size: 16px; 
+    background: #7DA2B5;
+    border: 2px solid #4A6F82;
+    font-weight: 700;
+    color: var(--blanco);
+  }
+  #btnDesencriptar{
+      position: absolute;
+      bottom: 0;
+      left: 500px;
+      border-radius: 10px;
+      width: 300px; 
+    height: 50px; 
+    font-size: 16px; 
+    background: #BDC7C2;
+    border: 2px solid #677970;
+    font-weight: 700;
+    color: var(--blanco);
+  }
+
+.resultadoEncriptado {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  width: 500px; /* Ancho del rectángulo */
+  height: 800px; /* Altura ajustada automáticamente */
+  border: none;
+  border-radius: 32px;
+  padding: 10px;
+  background-color: #fff;
+  display: flex; /* Para usar flexbox */
+  flex-direction: column; /* Alinear elementos verticalmente */
+  justify-content: center; /* Centrar verticalmente */
+}
+.img-encriptar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textoFinal {
+  margin-top: 30px; /* Ajusta el espacio entre la imagen y el textarea */
+}
+
+.textoFinal h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #344e5b;
+  text-align: center;
+}
+
+.textoFinal p {
+  font-size: 15px;
+  font-weight: 400;
+  color: #344e5b;
+  text-align: center;
+}
+
+.textoFinal textarea {
+  width: 100%; /* Ajusta el ancho del textarea al 100% del contenedor */
+  resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+  display: block;
+}
+#campoResultado {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: none;
+}
+
+#btnCopiar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: none;
+}
+#btnCopiar img {
+  width: 25px;
+  height: 25px;
+}
+footer {
+    text-align: center;
+    background:#A9927D;
+    padding: 40px;
+    margin-top: 400px; 
+}
+
+footer img{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+  .copyright {
+    color: white;
+    font-size: 13px;
+  }
