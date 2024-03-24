@@ -2,11 +2,11 @@
 
 Es un encriptador que se basa en las siguientes "llaves":
 
-`La letra "e" es convertida para "enter"`
-`La letra "i" es convertida para "imes"`
-`La letra "a" es convertida para "ai"`
-`La letra "o" es convertida para "ober"`
-`La letra "u" es convertida para "ufat"`
+* La letra "e" se convierte en "enter".
+* La letra "i" se convierte en "imes".
+* La letra "a" se convierte en "ai".
+* La letra "o" se convierte en "ober".
+* La letra "u" se convierte en "ufat".
 
 ## Contacto
 
