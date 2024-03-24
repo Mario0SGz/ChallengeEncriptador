@@ -41,6 +41,58 @@ body {
   font-size: 85px;
   font-weight: 500;
 }
+/*Fn del Header*/
+/*Responsive Header*/
+@media (max-width: 768px) {
+  .lg-img {
+    position: relative; /* Para posicionar elementos hijos relativos a este contenedor */
+    left: 40px;
+    top: 20px;
+  }
+
+  .lg-img img {
+    width: 80px;
+    margin: 10px;
+  }
+
+  .principal {
+    position: absolute; /* Para posicionar el texto de manera absoluta */
+    top: 50px; /* Ajustamos la posición desde la parte superior */
+    left: 150px;
+  }
+
+  .titulo-principal {
+    margin: 0;
+    font-size: 40px; /* Ajusta el tamaño según sea necesario */
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .lg-img {
+    position: relative; /* Para posicionar elementos hijos relativos a este contenedor */
+    left: 40px;
+    top: 20px;
+  }
+
+  .lg-img img {
+    width: 80px;
+    margin: 10px;
+  }
+
+  .principal {
+    position: absolute; /* Para posicionar el texto de manera absoluta */
+    top: 50px; /* Ajustamos la posición desde la parte superior */
+    left: 150px;
+  }
+
+  .titulo-principal {
+    margin: 0;
+    font-size: 40px; /* Ajusta el tamaño según sea necesario */
+    margin-top: 5px;
+  }
+}
+
 form {
   position: relative;
   top: 100px;
@@ -50,56 +102,148 @@ form {
 }
 
 textarea {
+  background-color: transparent;
   resize: none;
+  outline: auto;
+  border: none;
+  font-size: 2em;
 }
 
 #textoOriginal {
-    border: none;
-    background-color: transparent;
-    width: 50%;
-    margin-left: 40px;
-    margin-bottom: 100px; /* Ajusta este valor según sea necesario */
-  }
-  
+  width: 45%; /* Ajusta el ancho al 90% del contenedor */
+  height: 450px; /* Reducir la altura a 100 píxeles */
+  margin-left: 40px;
+  margin-bottom: 2%;
+}
+
+
 #textoOriginal::placeholder {
   color: var(--secundario);
   font-size: 19px;
   font-weight: 400;
 }
 
+.instrucciones {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.instrucciones p {
+  font-size: 15px;
+
+}
+.img-ex {
+  width: 20px; /* Ajusta el tamaño de la imagen según sea necesario */
+  margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+}
 #btnEncriptar {
+  position: absolute;
+  bottom: 0;
+  left: 75px;
+  border-radius: 10px;
+  width: 300px;
+  height: 50px;
+  font-size: 16px;
+  background: #4A6F82;
+  border: 2px solid #3C5968;
+  font-weight: 700;
+  color: var(--blanco);
+}
+#btnDesencriptar {
+  position: absolute;
+  bottom: 0;
+  left: 500px;
+  border-radius: 10px;
+  width: 300px;
+  height: 50px;
+  font-size: 16px;
+  background: #7B8E85;
+  border: 2px solid #54635C;
+  font-weight: 700;
+  color: var(--blanco);
+}
+
+/*Fin Formulario */
+/*Responsive Tablet formulario*/
+@media (max-width: 768px) {
+  form {
+   left: 0;
+    width: 100%; /* Ajusta el ancho al 100% */
+  }
+  .instrucciones{
+    margin-left: 9%;
+  }
+  
+  #textoOriginal {
+    width: 80%; /* Ajusta el ancho al 90% del contenedor */
+    height: 250px; /* Permite que la altura se ajuste automáticamente */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-bottom: 20px; /* Ajusta el margen inferior */
+    padding: 10px; /* Agrega un poco de espacio alrededor del textarea */
+  }
+  #btnEncriptar{
     position: absolute;
     bottom: 0;
-    left: 75px;
+    left: 70px;
     border-radius: 10px;
-    width: 300px; 
-    height: 50px; 
-    font-size: 16px; 
-    background: #7DA2B5;
-    border: 2px solid #4A6F82;
-    font-weight: 700;
-    color: var(--blanco);
+    width: 30%;
+    height: 50px;
+    font-size: 100%;
   }
   #btnDesencriptar{
-      position: absolute;
-      bottom: 0;
-      left: 500px;
-      border-radius: 10px;
-      width: 300px; 
-    height: 50px; 
-    font-size: 16px; 
-    background: #BDC7C2;
-    border: 2px solid #677970;
-    font-weight: 700;
-    color: var(--blanco);
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    border-radius: 10px;
+    width: 30%;
+    height: 50px;
+    font-size: 100%;
   }
+}
+/*Responsive 1440px formulario*/
+@media (max-width: 1440px) {
+  form {
+   left: 0;
+    width: 100%; /* Ajusta el ancho al 100% */
+  }
+  .instrucciones{
+    margin-left: 9%;
+  }
+  
+  #textoOriginal {
+    width: 80%; /* Ajusta el ancho al 90% del contenedor */
+    height: 250px; /* Permite que la altura se ajuste automáticamente */
+    margin: 0 auto; /* Centra horizontalmente */
+    margin-bottom: 20px; /* Ajusta el margen inferior */
+    padding: 10px; /* Agrega un poco de espacio alrededor del textarea */
+  }
+  #btnEncriptar{
+    position: absolute;
+    bottom: 0;
+    left: 135px;
+    border-radius: 10px;
+    width: 30%;
+    height: 50px;
+    font-size: 100%;
+  }
+  #btnDesencriptar{
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+    border-radius: 10px;
+    width: 30%;
+    height: 50px;
+    font-size: 100%;
+  }
+}
+
 
 .resultadoEncriptado {
   position: absolute;
-  top: 80px;
-  right: 40px;
+  top: 30%;
+  right: 60px;
   width: 500px; /* Ancho del rectángulo */
-  height: 800px; /* Altura ajustada automáticamente */
+  height: 450px; /* Altura ajustada automáticamente */
   border: none;
   border-radius: 32px;
   padding: 10px;
@@ -132,18 +276,13 @@ textarea {
   text-align: center;
 }
 
-.textoFinal textarea {
-  width: 100%; /* Ajusta el ancho del textarea al 100% del contenedor */
-  resize: none; /* Evita que el usuario pueda redimensionar el textarea */
-  display: block;
-}
 #campoResultado {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: transparent;
-  border: none;
+  margin-top: 70%;
+  width: 100%; /* Ajusta el ancho del textarea al 100% del contenedor */
+  height: 30%; /* Ajusta la altura del textarea al 100% del contenedor */
+  display: block;
+  padding: 5px; /* Añade un relleno al textarea */
+  box-sizing: border-box; /* Incluye el relleno en el ancho y alto del textarea */
 }
 
 #btnCopiar {
@@ -158,19 +297,68 @@ textarea {
   width: 25px;
   height: 25px;
 }
-footer {
-    text-align: center;
-    background:#A9927D;
-    padding: 40px;
-    margin-top: 400px; 
+/*Responsive Tablet CampoResultado*/
+@media (max-width: 768px) {
+  .resultadoEncriptado {
+    position: relative; /* Cambia la posición a relativa */
+    top: 180px; /* Ajusta esta posición según sea necesario */
+    left: 0;
+    right: 0;
+    margin: auto; /* Centra horizontalmente el rectángulo */
+    width: 80%; /* Ancho ajustado para que no ocupe toda la pantalla */
+    height: 300px; /* Altura ajustada automáticamente */
+    border: none;
+    border-radius: 32px;
+    padding: 10px;
+    background-color: #fff;
+    display: flex; /* Para usar flexbox */
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente dentro del rectángulo */
+  }
+  .img-encriptar {
+    display: none;
+  }
 }
 
-footer img{
-    width: 200px;
-    height: 200px;
-    margin: auto;
-}
-  .copyright {
-    color: white;
-    font-size: 13px;
+/*Responsive 1440px CampoResultado*/
+@media (max-width: 1440px) {
+  .resultadoEncriptado {
+    position: relative; /* Cambia la posición a relativa */
+    top: 180px; /* Ajusta esta posición según sea necesario */
+    left: 0;
+    right: 0;
+    margin: auto; /* Centra horizontalmente el rectángulo */
+    width: 80%; /* Ancho ajustado para que no ocupe toda la pantalla */
+    height: 300px; /* Altura ajustada automáticamente */
+    border: none;
+    border-radius: 32px;
+    padding: 10px;
+    background-color: #fff;
+    display: flex; /* Para usar flexbox */
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente dentro del rectángulo */
   }
+  .img-encriptar {
+    display: none;
+  }
+}
+
+footer {
+  text-align: center;
+  background: #a9927d;
+  padding: 40px;
+  margin-top: 250px;
+}
+
+footer img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+.copyright {
+  color: white;
+  font-size: 13px;
+}
+.copyright strong{
+  font-weight: 600;
+}
