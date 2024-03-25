@@ -275,8 +275,11 @@ textarea {
   
 }
 .textAFinal {
-  margin: 0; /* Establece todos los márgenes a 0 */
-  padding: 0; /* Establece todos los rellenos a 0 */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 628px;
+  height: 300px;
 }
 
 
@@ -339,6 +342,7 @@ textarea {
   width: 25px;
   height: 25px;
 }
+
 /*Responsive Tablet CampoResultado*/
 @media (max-width: 768px) {
   .resultadoEncriptado {
